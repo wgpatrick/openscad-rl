@@ -1,0 +1,18 @@
+# Configuration for multi-task training
+
+# Defines parameters for train_grpo.py when training on multiple tasks from tasks/tasks.json
+
+# Example:
+# model_load_path: "path/to/your/qwen8b_model"
+# task_ids: ["task1_cube", "another_task_id"] # Or specify "all" to use all tasks in tasks.json
+# learning_rate: 0.0001
+# num_epochs: 200
+# batch_size: 16
+
+# wandb_project: "openscad-rl-multi-task"
+
+# Include or reference parts of the main config.yaml for reward settings:
+# openscad:
+#   executable_path: "/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD"
+#   render_timeout_seconds: 60
+# reward_thresholds: { ... } 

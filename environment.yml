@@ -1,0 +1,23 @@
+name: openscad-rl-env
+channels:
+  - defaults
+  - conda-forge # For open3d and potentially other scientific packages
+  # - open3d-admin # Alternative channel for Open3D if conda-forge has issues
+dependencies:
+  - python>=3.8 # Specify a reasonable minimum Python version
+  - pip
+  - numpy>=1.20
+  - pyyaml>=5.4
+  - trimesh>=3.9 # trimesh for mesh loading and volume
+  - open3d>=0.14 # open3d for point cloud processing and geometric comparisons
+  # scipy is often a dependency of trimesh or open3d, but good to list if directly used.
+  # It was in your geometry_check.py (scipy.spatial.transform)
+  - scipy>=1.7 
+  # packaging was used in your render_scad.py for version comparison, though I simplified it.
+  # If complex version logic is re-added, uncomment this.
+  # - packaging 
+
+  - pip:
+    # If you have other pip-specific packages, list them here.
+    # e.g.:
+    # - some-package-from-pypi 

@@ -1,0 +1,19 @@
+# Configuration for single-task training
+
+# Inherits or overrides settings from a base config.yaml if needed,
+# or defines all necessary parameters for train_grpo.py for a single task.
+
+# Example:
+# model_load_path: "path/to/your/qwen8b_model"
+# task_id: "task1_cube" # From tasks/tasks.json
+# learning_rate: 0.0001
+# num_epochs: 100
+# batch_size: 8
+
+# wandb_project: "openscad-rl-single-task"
+
+# Include or reference parts of the main config.yaml for reward settings:
+# openscad:
+#   executable_path: "/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD"
+#   render_timeout_seconds: 60
+# reward_thresholds: { ... } 

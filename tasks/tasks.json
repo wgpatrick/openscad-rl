@@ -1,0 +1,8 @@
+[
+    {
+        "id": "task1_cube",
+        "prompt": "Create a 10x10x10 cube centered at the origin.",
+        "ref_stl": "tasks/stls/task1.stl"
+    }
+    // Add more tasks here
+] 

@@ -1,0 +1,24 @@
+openscad:
+  executable_path: "/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD" # PLEASE UPDATE THIS PATH
+  minimum_version: "2021.01" # From render_scad.py
+  render_timeout_seconds: 60
+  export_format: "asciistl" # 'stl' for binary, 'asciistl' for ascii
+
+reward_thresholds:
+  # Volume check: maximum allowed percentage difference (e.g., 5.0 for 5%)
+  volume_threshold_percent: 2.0
+  # Chamfer distance: maximum allowed distance in mm
+  chamfer_threshold_mm: 1.0
+  # Hausdorff distance (e.g., 95th percentile): maximum allowed distance in mm
+  hausdorff_threshold_mm: 1.0
+  # ICP fitness score: minimum acceptable fitness (0.0 to 1.0) for similarity alignment
+  icp_fitness_threshold: 0.95 # Adjusted slightly, can be tuned
+  # Point cloud sampling for similarity
+  similarity_point_cloud_samples: 50000 # Number of points to sample for similarity checks
+  # Voxel size for FPFH feature calculation during alignment (in mm)
+  voxel_size_for_fpfh_mm: 0.5
+
+# Path to the reference STL file for comparison.
+# This will be loaded by the reward function.
+# You can use an absolute path or a path relative to this config file's directory.
+reference_stl_file: "tasks/stls/task1.stl" 
